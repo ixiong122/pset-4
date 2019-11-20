@@ -6,7 +6,7 @@ let positiveInteger = 0;
 
 do {
   positiveInteger = readlineSync.question("Positive Integer: ");
-} while (positiveInteger < 0 ||positiveInteger < MIN || positiveInteger > MAX);
+} while (positiveInteger < 0 ||positiveInteger < MIN || positiveInteger > MAX || Number.isNaN(positiveInteger) || positiveInteger % 1);
 
 do {
   number = positiveInteger % 10;
