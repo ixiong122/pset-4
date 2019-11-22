@@ -1,16 +1,21 @@
 const readlineSync = require("readline-sync");
 
-const MIN = Number.MIN_SAFE_INTEGER;
+const MIN = 1;
 const MAX = Number.MAX_SAFE_INTEGER;
 let positiveInteger = 0;
-
+let sum = 0;
+let number = 0;
 do {
-  positiveInteger = readlineSync.question("Positive Integer: ");
-} while (positiveInteger < 0 ||positiveInteger < MIN || positiveInteger > MAX || Number.isNaN(positiveInteger) || positiveInteger % 1);
+  positiveInteger = Number(readlineSync.question("Positive Integer: "));
+} while (positiveInteger < MIN || positiveInteger > MAX || Number.isNaN(positiveInteger) || positiveInteger % 1 !== 0);
 
-do {
-  number = positiveInteger % 10;
-    if (number % 2 != 0) {
-      sum = sum + number;
-    }
-} while (positiveInteger > 0);
+while (positiveInteger > 0) {
+   number = positiveInteger % 10;
+   positiveInteger = Math.floor(positiveInteger / 10);
+
+   if (number % 2 !== 0) {
+     sum = sum + number;
+   }
+}
+let formatted = sum.toLocaleString("en");
+console.log(sum);

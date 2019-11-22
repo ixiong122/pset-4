@@ -11,6 +11,6 @@ do {
 } while (height < MIN || height > MAX);
 
 for (let i = 1; i <= height; i++) {
-  row = row + row2;
+  row =  row + row2 ;
   console.log(row);
 }
