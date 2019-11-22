@@ -13,7 +13,7 @@ if (positiveInteger == 1) {
 for (let i = 2; i < positiveInteger; i++) {
   if (positiveInteger % i == 0){
     console.log("Not prime.");
-  let  i = positiveInteger;
+    i = positiveInteger;
 }
 console.log("Prime.");
 }
