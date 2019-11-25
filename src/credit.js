@@ -21,7 +21,7 @@ for (let i = 0; i >= 0; i-= 2) {
     creditAdd = creditAdd + Number(doubleDigits);
   }
 }
-for (let i = length - 1; i >= 0; i -=2) {
+for (let i = length - 1; i >= 0; i -= 2) {
   let otherNumber = Number(creditCard.charAt(i));
   creditAdd += otherNumber;
 }
@@ -29,10 +29,10 @@ for (let i = length - 1; i >= 0; i -=2) {
 if(String(creditAdd).charAt(String(creditAdd).length - 1 == "0")) {
   if ((length == 15 && creditCard.charAt(0) == "3") && (creditCard.charAt(1) == "4" || creditCard.charAt(1) == "7")) {
     console.log("\nAmex.");
-} else if (length >= 13 && length <= 16 && creditCard.charAt(0) == "4") {
-  console.log("\nVisa.");
 } else if (length == 16 && creditCard.charAt(0) == "5" && (creditCard.charAt(1) == "1") || creditCard.charAt(1) == "2" || creditCard.charAt(1) == "3" || creditCard.charAt(1) == "4" || creditCard.charAt(1) == "5"){
   console.log("\nMastercard.");
+} else if (length >= 13 && length <= 16 && creditCard.charAt(0) == "4") {
+  console.log("\nVisa.");
 } else {
   console.log("\nInvalid.");
 }

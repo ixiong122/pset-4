@@ -8,10 +8,12 @@ let row;
 do {
   height = readlineSync.question("\nHeight: ");
 } while (height < MIN || height > MAX);
+
 console.log();
+
 let step = height;
 while (step > 0) {
-  row = ""
+  row = "";
   for (i = 0; i <= height; i++) {
     row = row + "#";
   }
@@ -19,7 +21,6 @@ while (step > 0) {
     row = row.replace(row.charAt(i), " ");
   }
   console.log(row);
-  step = step -1
+  step = step - 1
 }
-console.log("\n");
-log(row + "#");
+console.log();

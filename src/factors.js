@@ -2,18 +2,20 @@ const readlineSync = require("readline-sync");
 
 const MIN = 1;
 const MAX = Number.MAX_SAFE_INTEGER;
-var positiveInteger = 0;
-let number = 0;
-let divided = 0;
-let ans = 0;
 
-do {
-  positiveInteger = Number(readlineSync.question("Positive Integer: "));
-} while (positiveInteger < MIN || positiveInteger > MAX || positiveInteger % 1 !== 0 || Number.isNaN(positiveInteger));
+let positiveInteger = Number(readlineSync.question("\nPositive integer: "));
+let factor = 0;
 
-for (var i = 1; i <= positiveInteger; i++) {
-  if (num % i == 0) {
-            str += ',' + i;
-        }
-    }
+while (Number.isNaN(positiveInteger) || positiveInteger < MIN || positiveInteger > MAX || !Number.isInteger(positiveInteger)) {
+  positiveInteger = Number(readlineSync.question("Positive integer: "));
 }
+
+process.stdout.write("\n");
+
+for (var i = 1; i * i <= positiveInteger; i++) {
+  if (positiveInteger % i == 0)  {
+    factors = (i == (positiveInteger / i)) ? i + ".\n " : i + ", " + positiveInteger / i + ", "
+    process.stdout.write(factors);
+  }
+}
+console.log("\n")

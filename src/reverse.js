@@ -4,9 +4,10 @@ const MIN = 1;
 const MAX = Number.MAX_SAFE_INTEGER;
 let positiveInteger = 0;
 let numberValue = 0;
+
 do {
    positiveInteger = readlineSync.question("Positive Integer: ");
-} while (positiveInteger < MIN || positiveInteger > MAX || Number.isNaN(positiveInteger) || positiveInteger % 1 !==0);
+} while (positiveInteger < MIN || positiveInteger > MAX || Number.isNaN(positiveInteger) || positiveInteger % 1 !== 0);
 
 do {
   number = positiveInteger % 10
@@ -18,4 +19,4 @@ do {
   }
 } while (positiveInteger > 0)
 
-console.log("\n" + numberValue + "\n");
+console.log("\n" + numberValue + "\n\n");

@@ -5,6 +5,7 @@ const MAX = Number.MAX_SAFE_INTEGER;
 let positiveInteger = 0;
 let sum = 0;
 let number = 0;
+
 do {
   positiveInteger = Number(readlineSync.question("Positive Integer: "));
 } while (positiveInteger < MIN || positiveInteger > MAX || Number.isNaN(positiveInteger) || positiveInteger % 1 !== 0);
@@ -18,4 +19,5 @@ while (positiveInteger > 0) {
    }
 }
 let formatted = sum.toLocaleString("en");
-console.log(sum);
+
+console.log("\n" + sum + ".\n\n");

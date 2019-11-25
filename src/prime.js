@@ -23,7 +23,9 @@ if (positiveInteger == 1) {
 }
 
 if (isPrime) {
-  console.log("\nPrime.");
+  console.log("\nPrime.\n")
+  console.log();
 } else {
-  console.log("\nNot prime.");
+  console.log("\nNot prime.\n");
+  console.log();
 }

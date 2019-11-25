@@ -13,11 +13,9 @@ do {
     average = average + 1;
   }
 } while ((positiveInteger >= MIN && positiveInteger < MAX && positiveInteger % 1 == 0) || Number.isNaN(positiveInteger));
+
 let answer = (sum / average);
 let final =((100 * answer) / (100));
 let finalAnswer = final.toLocaleString("en", {minimumFractionDigits:3, maximumFractionDigits:3});
-// sum = sum - positiveInteger;
-// divisor -= 1;
-// average = sum / divisor;
-// average = average.toLocaleString("en", {minimumFractionDigits:3, maximumFractionDigits:3});
-console.log("\n" + finalAnswer + ".\n");
+
+console.log("\n" + finalAnswer + ".\n\n");

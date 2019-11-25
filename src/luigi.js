@@ -12,6 +12,8 @@ do {
 
 let step = height;
 
+console.log();
+
 while (step > 0) {
   leftPyramid = "";
   rightPyramid = "";
